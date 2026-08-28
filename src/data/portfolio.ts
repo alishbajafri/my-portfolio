@@ -18,9 +18,9 @@ export const CONTACT = {
 
 export const PROFILE = {
   /** Professional profile photo (hero). External URL is fine. */
-  heroImageUrl: "", // PROFILE_IMAGE_URL
+  heroImageUrl: "https://my-portfolio-ebon-psi-24.vercel.app/profile.png", // PROFILE_IMAGE_URL
   /** Larger editorial portrait used in the About section. */
-  aboutImageUrl: "", // ABOUT_IMAGE_URL
+  aboutImageUrl: "https://my-portfolio-ebon-psi-24.vercel.app/profile.png", // ABOUT_IMAGE_URL
 };
 
 export type ProjectApp = {
