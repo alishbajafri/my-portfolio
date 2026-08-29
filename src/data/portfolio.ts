@@ -13,7 +13,7 @@ export const CONTACT = {
   /** Replace with the real GitHub profile URL */
   githubUrl: "",
   /** Replace with a hosted PDF of the CV */
-  cvUrl: "", // CV_URL
+  cvUrl: "https://my-portfolio-ebon-psi-24.vercel.app/Alishba-Fatima-Resume.pdf",
 };
 
 export const PROFILE = {

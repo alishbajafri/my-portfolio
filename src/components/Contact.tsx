@@ -75,19 +75,30 @@ export function Contact() {
               <a
                 href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
                 className="group flex items-center gap-4 bg-background p-5 transition-colors hover:bg-card"
+                aria-label="Phone number"
               >
                 <Phone className="size-4 text-copper" />
-                <span className="text-sm">{CONTACT.phone}</span>
+                <span className="group relative inline-flex items-center text-sm">
+                  <span className="select-none text-transparent transition-opacity duration-200 group-hover:opacity-0 group-focus:opacity-0">
+                    {CONTACT.phone}
+                  </span>
+                  <span className="pointer-events-none absolute inset-0 flex items-center justify-start opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus:opacity-100">
+                    {CONTACT.phone}
+                  </span>
+                </span>
               </a>
-              <div className="flex flex-wrap gap-6 bg-background p-5 text-sm">
-                {CONTACT.linkedinUrl ? (
-                  <a href={CONTACT.linkedinUrl} target="_blank" rel="noreferrer" className="hover:text-copper">
-                    LinkedIn
-                  </a>
-                ) : (
-                  <span className="text-muted-foreground/60">LinkedIn unavailable</span>
-                )}
-              </div>
+              {CONTACT.linkedinUrl ? (
+                <a
+                  href={CONTACT.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-4 bg-background p-5 text-sm transition-colors hover:bg-card hover:text-copper"
+                >
+                  <span className="text-copper">LinkedIn</span>
+                </a>
+              ) : (
+                <div className="bg-background p-5 text-sm text-muted-foreground/60">LinkedIn unavailable</div>
+              )}
             </Reveal>
           </div>
 
