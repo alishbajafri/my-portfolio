@@ -121,11 +121,8 @@ export function Hero() {
                   <Download className="size-4" /> Download CV
                 </a>
               ) : (
-                <span
-                  title="Add CONTACT.cvUrl in src/data/portfolio.ts"
-                  className="flex items-center gap-2 px-2 py-4 text-sm text-muted-foreground/60"
-                >
-                  <Download className="size-4" /> Download CV — CV_URL
+                <span className="flex items-center gap-2 px-2 py-4 text-sm text-muted-foreground/60">
+                  <Download className="size-4" /> Download CV unavailable
                 </span>
               )}
             </motion.div>

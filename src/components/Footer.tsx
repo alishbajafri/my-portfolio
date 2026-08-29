@@ -18,7 +18,6 @@ export function Footer() {
 
           <nav aria-label="Footer" className="flex flex-wrap items-center gap-6">
             <FooterLink href={CONTACT.linkedinUrl} label="LinkedIn" placeholder="LINKEDIN_URL" />
-            <FooterLink href={CONTACT.githubUrl} label="GitHub" placeholder="GITHUB_URL" />
             <FooterLink href={`mailto:${CONTACT.email}`} label="Email" placeholder="" />
           </nav>
         </div>
@@ -55,12 +54,7 @@ function FooterLink({
 }) {
   if (!href) {
     return (
-      <span
-        title={`Add ${placeholder} in src/data/portfolio.ts`}
-        className="text-sm text-muted-foreground/60"
-      >
-        {label} — {placeholder}
-      </span>
+      <span className="text-sm text-muted-foreground/60">{label} unavailable</span>
     );
   }
   return (

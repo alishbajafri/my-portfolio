@@ -85,14 +85,7 @@ export function Contact() {
                     LinkedIn
                   </a>
                 ) : (
-                  <span className="text-muted-foreground/60">LinkedIn — LINKEDIN_URL</span>
-                )}
-                {CONTACT.githubUrl ? (
-                  <a href={CONTACT.githubUrl} target="_blank" rel="noreferrer" className="hover:text-copper">
-                    GitHub
-                  </a>
-                ) : (
-                  <span className="text-muted-foreground/60">GitHub — GITHUB_URL</span>
+                  <span className="text-muted-foreground/60">LinkedIn unavailable</span>
                 )}
               </div>
             </Reveal>

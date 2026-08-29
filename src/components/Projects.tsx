@@ -80,42 +80,41 @@ function ProjectRow({
         </motion.div>
 
         {/* mobile / tablet static preview */}
-        <div className="aspect-video w-full overflow-hidden border border-border bg-card md:hidden">
-          {preview ? (
+        {preview ? (
+          <div className="aspect-video w-full overflow-hidden border border-border bg-card md:hidden">
             <img
               src={preview}
               alt={`${project.title} preview`}
               loading="lazy"
               className="size-full object-cover"
             />
-          ) : (
-            <div className="flex size-full items-center justify-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              PROJECT_IMAGE_URL
-            </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="flex aspect-video w-full items-center justify-center border border-dashed border-border bg-card/40 text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70 md:hidden">
+            No preview
+          </div>
+        )}
 
         {/* desktop cursor-following preview */}
-        <motion.div
-          style={{ x: sx, y: sy, rotate }}
-          animate={{ opacity: hover ? 1 : 0, scale: hover ? 1 : 0.9 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="pointer-events-none absolute right-[12%] top-1/2 z-10 hidden aspect-video w-[300px] -translate-y-1/2 overflow-hidden border border-border bg-card md:block"
-        >
-          {preview ? (
-            <img
-              src={preview}
-              alt=""
-              aria-hidden
-              loading="lazy"
-              className="size-full object-cover"
-            />
-          ) : (
-            <div className="flex size-full items-center justify-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-              PROJECT_IMAGE_URL
-            </div>
-          )}
-        </motion.div>
+        {preview ? (
+          <motion.div
+            style={{ x: sx, y: sy, rotate }}
+            animate={{ opacity: hover ? 1 : 0, scale: hover ? 1 : 0.9 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="pointer-events-none absolute right-[12%] top-1/2 z-10 hidden aspect-video w-[300px] -translate-y-1/2 overflow-hidden border border-border bg-card md:block"
+          >
+            <img src={preview} alt="" aria-hidden loading="lazy" className="size-full object-cover" />
+          </motion.div>
+        ) : (
+          <motion.div
+            style={{ x: sx, y: sy, rotate }}
+            animate={{ opacity: hover ? 1 : 0, scale: hover ? 1 : 0.9 }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="pointer-events-none absolute right-[12%] top-1/2 z-10 hidden aspect-video w-[300px] -translate-y-1/2 items-center justify-center border border-dashed border-border bg-card/40 text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70 md:flex"
+          >
+            No preview
+          </motion.div>
+        )}
 
         <motion.span
           animate={{ rotate: hover ? 45 : 0, borderColor: hover ? "var(--copper)" : "var(--border)" }}

@@ -22,6 +22,10 @@ function MediaFrame({ project }: { project: Project }) {
     );
   }
 
+  if (!project.imageUrl && !vid) {
+    return null;
+  }
+
   return (
     <div className="relative aspect-video w-full overflow-hidden border border-border bg-card">
       {project.imageUrl ? (
@@ -31,20 +35,13 @@ function MediaFrame({ project }: { project: Project }) {
           loading="lazy"
           className="size-full object-cover"
         />
-      ) : vid ? (
+      ) : (
         <img
           src={`https://i.ytimg.com/vi/${vid}/maxresdefault.jpg`}
           alt={`${project.title} demo thumbnail`}
           loading="lazy"
           className="size-full object-cover"
         />
-      ) : (
-        <div className="flex size-full flex-col items-center justify-center gap-2">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-            PROJECT_IMAGE_URL
-          </span>
-          <span className="text-xs text-muted-foreground/70">Screenshot goes here</span>
-        </div>
       )}
       {vid && (
         <button
@@ -127,7 +124,7 @@ export function ProjectModal({
 
               {!vid && (
                 <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Demo coming soon — add PROJECT_VIDEO_URL
+                  Demo coming soon
                 </p>
               )}
 
@@ -167,23 +164,9 @@ export function ProjectModal({
               </div>
 
               {project.apps && (
-                <div className="mt-12 grid gap-px border border-border bg-border md:grid-cols-3">
+                <div className="mt-12 grid gap-6 md:grid-cols-3">
                   {project.apps.map((app) => (
-                    <div key={app.name} className="bg-background p-6">
-                      <div className="mb-4 aspect-video border border-border bg-card">
-                        {app.imageUrl ? (
-                          <img
-                            src={app.imageUrl}
-                            alt={`${app.name} screenshot`}
-                            loading="lazy"
-                            className="size-full object-cover"
-                          />
-                        ) : (
-                          <div className="flex size-full items-center justify-center font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground">
-                            PROJECT_IMAGE_URL
-                          </div>
-                        )}
-                      </div>
+                    <div key={app.name} className="rounded-none border border-border bg-transparent p-5">
                       <h5 className="font-display text-lg tracking-tight">{app.name}</h5>
                       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                         {app.description}
@@ -237,7 +220,7 @@ function ActionLink({
   if (!href) {
     return (
       <span className="flex cursor-not-allowed items-center gap-2 border border-border/60 px-6 py-3.5 text-sm text-muted-foreground/60">
-        <Icon className="size-4" /> {label} — link coming soon
+        <Icon className="size-4" /> {label} unavailable
       </span>
     );
   }

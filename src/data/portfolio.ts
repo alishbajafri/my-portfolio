@@ -9,9 +9,9 @@ export const CONTACT = {
   email: "alishbafatima2018@gmail.com",
   phone: "+92 305 2854505",
   /** Replace with the real LinkedIn profile URL */
-  linkedinUrl: "", // LINKEDIN_URL
+  linkedinUrl: "https://www.linkedin.com/in/alishba-fatimaa",
   /** Replace with the real GitHub profile URL */
-  githubUrl: "", // GITHUB_URL
+  githubUrl: "",
   /** Replace with a hosted PDF of the CV */
   cvUrl: "", // CV_URL
 };
@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
     technologies: ["Python", "Flask", "OpenCV", "Pandas", "NumPy", "HTML", "CSS", "Jinja2", "OOP"],
     imageUrl: "", // PROJECT_IMAGE_URL
     galleryImages: [], // [PROJECT_IMAGE_URL, ...]
-    videoUrl: "", // PROJECT_VIDEO_URL (YouTube)
+    videoUrl: "https://youtu.be/_sAD1a1ew1g", // PROJECT_VIDEO_URL (YouTube)
     githubUrl: "", // GITHUB_URL
     liveUrl: "", // LIVE_DEMO_URL
   },
@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
     technologies: ["Java", "DSA", "Java Swing", "AWT", "OOP"],
     imageUrl: "",
     galleryImages: [],
-    videoUrl: "",
+    videoUrl: "https://youtu.be/pcMNNsKRIvM",
     githubUrl: "",
     liveUrl: "",
   },
@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
     technologies: ["Python", "Tkinter"],
     imageUrl: "",
     galleryImages: [],
-    videoUrl: "",
+    videoUrl: "https://youtu.be/FKq6DrUJJYI",
     githubUrl: "",
     liveUrl: "",
   },
