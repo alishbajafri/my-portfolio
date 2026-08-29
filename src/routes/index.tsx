@@ -9,7 +9,7 @@ import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
-const TITLE = "Alishba Fatima | AI Engineer & Full-Stack Developer";
+const TITLE = "Alishba'sPortfolio";
 const DESCRIPTION =
   "Portfolio of Alishba Fatima, an AI Engineer and Full-Stack Developer building intelligent, scalable web, mobile, and software applications.";
 

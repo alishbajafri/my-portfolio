@@ -17,7 +17,15 @@ export const sendContactMessage = createServerFn({ method: "POST" })
     const from = process.env["CONTACT_FROM_EMAIL"] || "Portfolio <onboarding@resend.dev>";
 
     if (!apiKey) {
-      throw new Error("Email service is not configured yet. Please email directly for now.");
+      throw new Error(
+        "Email service is not configured yet. Add RESEND_API_KEY and CONTACT_FROM_EMAIL in your environment, or email directly for now.",
+      );
+    }
+
+    if (!process.env["CONTACT_FROM_EMAIL"]) {
+      console.warn(
+        "CONTACT_FROM_EMAIL is not set. Using Resend default sender; add a verified domain email to avoid delivery issues.",
+      );
     }
 
     const escape = (s: string) =>

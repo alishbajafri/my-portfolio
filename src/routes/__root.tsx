@@ -73,7 +73,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Alishba Fatima | AI Engineer & Full-Stack Developer" },
+      { title: "Alishba'sPortfolio" },
       {
         name: "description",
         content:
@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Alishba Fatima" },
       {
         property: "og:title",
-        content: "Alishba Fatima | AI Engineer & Full-Stack Developer",
+        content: "Alishba'sPortfolio",
       },
       {
         property: "og:description",
