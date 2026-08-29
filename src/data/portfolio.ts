@@ -13,14 +13,14 @@ export const CONTACT = {
   /** Replace with the real GitHub profile URL */
   githubUrl: "",
   /** Replace with a hosted PDF of the CV */
-  cvUrl: "https://my-portfolio-ebon-psi-24.vercel.app/Alishba-Fatima-Resume.pdf",
+  cvUrl: "https://alishbafatima.vercel.app/Alishba-Fatima-Resume.pdf",
 };
 
 export const PROFILE = {
   /** Professional profile photo (hero). External URL is fine. */
-  heroImageUrl: "https://my-portfolio-ebon-psi-24.vercel.app/profile.png", // PROFILE_IMAGE_URL
+  heroImageUrl: "https://alishbafatima.vercel.app/profile.png", // PROFILE_IMAGE_URL
   /** Larger editorial portrait used in the About section. */
-  aboutImageUrl: "https://my-portfolio-ebon-psi-24.vercel.app/profile.png", // ABOUT_IMAGE_URL
+  aboutImageUrl: "https://alishbafatima.vercel.app/profile.png", // ABOUT_IMAGE_URL
 };
 
 export type ProjectApp = {
