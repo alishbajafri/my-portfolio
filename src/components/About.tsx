@@ -70,7 +70,7 @@ export function About() {
 
         <div className="order-1 lg:order-2">
           <h2 className="font-display text-[clamp(2rem,5vw,4rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
-            <RevealText text="Building with code, intelligence, and purpose." />
+            <RevealText text="Building with Lode, intelligence, and purpose." />
           </h2>
 
           <Reveal delay={1} className="mt-8 max-w-xl space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
